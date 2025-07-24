@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feliz 5 Meses, Mary 💖</title>
+  <style>
+    :root {
+      --rosa-claro: #ffe4e1;
+      --rosa-fuerte: #ff69b4;
+      --texto: #800000;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #ffb6c1, var(--rosa-claro));
+      color: var(--texto);
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #fff0f5;
+      text-shadow: 2px 2px 4px var(--rosa-fuerte);
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h2 {
+      color: var(--rosa-fuerte);
+      margin-bottom: 30px;
+      font-size: 1.2em;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .btn-corazon-container {
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .btn-corazon {
+      font-size: 2.5em;
+      background-color: var(--rosa-fuerte);
+      border: none;
+      border-radius: 50%;
+      color: white;
+      width: 90px;
+      height: 90px;
+      cursor: pointer;
+      box-shadow: 0 0 25px var(--rosa-fuerte), 0 0 50px #ffc0cb;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: latido 1s infinite alternate;
+    }
+
+    .btn-corazon:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 35px #ff1493, 0 0 60px var(--rosa-fuerte);
+    }
+
+    .texto-bajo-corazon {
+      font-size: 1em;
+      margin-top: 10px;
+      color: var(--texto);
+      max-width: 90%;
+    }
+
+    .frase {
+      background-color: rgba(255, 182, 193, 0.85);
+      color: var(--texto);
+      margin: 15px auto;
+      padding: 20px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 600px;
+      font-size: 1.2em;
+      box-shadow: 0 0 10px var(--rosa-fuerte);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+      animation: glowSuave 2s infinite alternate;
+    }
+
+    .frase.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .corazon {
+      font-size: 2em;
+      animation: latido 1s infinite alternate;
+      margin-top: 30px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 1.1em;
+      color: #fffafa;
+      animation: fadeIn 3s ease-in-out, glow 2s infinite alternate;
+    }
+
+    @keyframes latido {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatHeart {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-800px); opacity: 0; }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px var(--rosa-fuerte); }
+      to { text-shadow: 0 0 20px #ff1493, 0 0 30px var(--rosa-fuerte); }
+    }
+
+    @keyframes glowSuave {
+      from { box-shadow: 0 0 8px #ffc0cb; }
+      to { box-shadow: 0 0 16px #ff69b4; }
+    }
+
+    .heart-float {
+      position: absolute;
+      font-size: 1.5em;
+      color: #ff1493;
+      animation: floatHeart 10s linear infinite;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      .btn-corazon { width: 70px; height: 70px; font-size: 2em; }
+      .frase { font-size: 1em; }
+      .texto-bajo-corazon { font-size: 0.9em; }
+      footer { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💗 Feliz 5 Meses, Mary 💗</h1>
+  <h2>Eres el sueño más bonito que tengo despierto</h2>
+
+  <div class="btn-corazon-container">
+    <button class="btn-corazon" onclick="toggleMusic()">❤️</button>
+    <div class="texto-bajo-corazon" id="textoBoton">Pulsa mi corazón para comenzar 💞</div>
+  </div>
+
+ <audio id="audio" src="D:/cod/ded/para dedicar.mp3"></audio>
+
+  <!-- Frases -->
+  <div class="frase">💖 En estos 5 meses he aprendido que el amor verdadero no se dice, se demuestra… y tú lo haces con cada mirada, cada gesto, cada palabra.</div>
+  <div class="frase">🌷 A tu lado descubrí que los días más simples se vuelven mágicos cuando estoy contigo.</div>
+  <div class="frase">🌌 Cada minuto contigo es un universo donde solo existe la felicidad de tenernos.</div>
+  <div class="frase">💗 No hay un solo día que no agradezca al destino por haberte cruzado en mi camino, mi Mary preciosa.</div>
+  <div class="frase">🌙 Me basta con cerrar los ojos para sentirte cerca, porque estás grabada en cada rincón de mi alma.</div>
+  <div class="frase">🌻 Tu risa es mi melodía favorita, y tu abrazo… mi lugar favorito en todo el mundo.</div>
+  <div class="frase">🍀 No eres solo mi novia, eres mi mejor amiga, mi compañera y el gran amor que siempre soñé.</div>
+  <div class="frase">🎇 Estos 5 meses son apenas el prólogo de una historia que quiero escribir contigo el resto de mi vida.</div>
+  <div class="frase">✨ Gracias por enseñarme que el amor no se encuentra, se construye, día a día, con ternura y paciencia.</div>
+  <div class="frase">🌹 Eres mi razón de sonreír, mi pensamiento favorito y mi alegría constante.</div>
+  <div class="frase">🫶 Todo lo que soy se engrandece cuando estoy contigo. Porque tú eres mi hogar, Mary.</div>
+  <div class="frase">🎈 Me haces sentir afortunado cada día solo por existir en mi vida. Eres mi milagro cotidiano.</div>
+  <div class="frase">💫 En tus ojos encontré mi paz, y en tu amor mi destino.</div>
+  <div class="frase">📝 Si mi amor por ti pudiera escribirse, llenaría todos los libros del mundo con nuestras memorias.</div>
+  <div class="frase">🌺 Te amo con cada latido, con cada palabra que no digo, con todo lo que soy y lo que quiero ser contigo.</div>
+
+  <div class="corazon">❤️ ❤️ ❤️</div>
+
+  <footer>
+    Hecho con amor infinito para ti, mi Mary preciosa 💕<br>
+    ¡Gracias por 5 meses maravillosos! 💖 Te amo más cada día.
+  </footer>
+
+  <script>
+    const audio = document.getElementById("audio");
+    const frases = document.querySelectorAll(".frase");
+    const textoBoton = document.getElementById("textoBoton");
+    let reproducido = false;
+
+    function toggleMusic() {
+      if (audio.paused) {
+        audio.play();
+        textoBoton.innerText = "TE AMO AMOR DE MI VIDA 💗";
+        if (!reproducido) {
+          frases.forEach((frase, index) => {
+            setTimeout(() => {
+              frase.classList.add("visible");
+            }, 1000 * (index + 1));
+          });
+          reproducido = true;
+        }
+      } else {
+        audio.pause();
+        textoBoton.innerText = "Pulsa mi corazón para continuar 💕";
+      }
+    }
+
+    // Corazones flotando
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.innerText = "💖";
+      heart.classList.add("heart-float");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.top = "100vh";
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }, 600);
+  </script>
+</body>
+</html>
